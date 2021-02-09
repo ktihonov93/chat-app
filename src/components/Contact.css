@@ -43,7 +43,6 @@
   }
   
   .Contact .status .status-offline {
-    display: none;
     background: #f4511e;
   }
   
