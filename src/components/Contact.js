@@ -1,24 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Contact.css';
 
-const online = true;
-
-function Contact() {
+function Contact(props) {
   return (
     <div className="Contact">
       <img className="avatar"
-        src="https://randomuser.me/api/portraits/women/80.jpg"
+        src={props.avatar}
         alt="avatar"
       />
       <div>
         <div className="name">
-          Marion Woods
+          {props.name}
           </div>
         <div className="status">
-        <div className={online ? "status-online" : "status-offline"}>        
+        <div className={props.online ? "status-online" : "status-offline"}>        
           </div>
           <div className="status-text">
-          {online ? "online" : "offline"}
+          {props.online ? "online" : "offline"}
           </div>
           
         </div>
@@ -26,5 +25,13 @@ function Contact() {
     </div>
   );
 }
+
+QuoteCard.propTypes = {
+
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  online: PropTypes.bool.isRequired,
+
+};
 
 export default Contact;
