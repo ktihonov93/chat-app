@@ -26,11 +26,11 @@ function Contact(props) {
   );
 }
 
-QuoteCard.propTypes = {
+Contact.propTypes = {
 
   name: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  online: PropTypes.bool.isRequired,
+  online: PropTypes.bool,
 
 };
 
