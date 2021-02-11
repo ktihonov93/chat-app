@@ -2,22 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Contact.css';
 
-function Contact(props) {
+function Contact({name, avatar, online}) {
   return (
     <div className="Contact">
       <img className="avatar"
-        src={props.avatar}
+        src={avatar}
         alt="avatar"
       />
       <div>
         <div className="name">
-          {props.name}
+          {name}
           </div>
         <div className="status">
-        <div className={props.online ? "status-online" : "status-offline"}>        
+        <div className={online ? "status-online" : "status-offline"}>        
           </div>
           <div className="status-text">
-          {props.online ? "online" : "offline"}
+          {online ? "online" : "offline"}
           </div>
           
         </div>
